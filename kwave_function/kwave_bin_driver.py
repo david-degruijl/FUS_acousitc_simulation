@@ -34,8 +34,8 @@ from typing import List
 
 import subprocess
 
-from kwave_function.kwave_input_file import KWaveInputFile
-from kwave_function.kwave_output_file import KWaveOutputFile, SensorSamplingType, DomainSamplingType
+from FUS_acousitc_simulation.kwave_function.kwave_input_file import KWaveInputFile
+from FUS_acousitc_simulation.kwave_function.kwave_output_file import KWaveOutputFile, SensorSamplingType, DomainSamplingType
 
 import os
 upper_path = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
@@ -116,6 +116,7 @@ class KWaveBinaryDriver(object):
         #     exec_args['benchmark'] = time_steps
         exec_command = self.binary_path + self.__build_exec_command(exec_args)
 
+        print(exec_command)
 
         proc = subprocess.Popen(exec_command)
         proc.communicate()

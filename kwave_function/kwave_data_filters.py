@@ -30,7 +30,7 @@
 """
 
 import numpy as np
-from scipy.signal import blackman
+from scipy.signal.windows import blackman
 from scipy.interpolate import interpn
 
 

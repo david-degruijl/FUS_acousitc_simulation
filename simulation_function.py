@@ -324,10 +324,10 @@ class makeSimulation():
 
         ###################################################################
         # assign skull properties depend on HU value  -   Ref. Multi resolution, Yoon et al, 2019
-        # PI = skullCrop_arr/np.max(skullCrop_arr)
-        # ct_sound_speed = c_water + (2800 - c_water)*PI
-        # ct_density     = d_water + (d_bone - d_water)*PI
-        # ct_att         = 0 + (20 - 0)*PI
+        PI = skullCrop_arr/np.max(skullCrop_arr)
+        ct_sound_speed = c_water + (2800 - c_water)*PI
+        ct_density     = d_water + (d_bone - d_water)*PI
+        ct_att         = 0 + (20 - 0)*PI
 
         ####################################################################
         # Assign material properties

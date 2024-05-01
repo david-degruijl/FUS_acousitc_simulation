@@ -10,7 +10,7 @@ import numba
 l2n = lambda l: np.array(l)
 n2l = lambda n: list(n)
 
-set_num_threads(15)
+set_num_threads(12)
 @njit(nopython=True, parallel=True, fastmath= True)
 #@cuda.reduce
 def make_transducer(ROC, width, dx, Tcenter, Tnormal):
